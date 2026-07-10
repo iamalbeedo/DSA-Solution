@@ -24,8 +24,7 @@ class Solution:
         # WHAT: Precompute binary lifting powers table.
         for j in range(1, max_l):
             for i in range(n):
-                up[j][i] = up[j - 1][up[j - 1][i]]
-                
+                up[j][i] = up[j - 1][up[j - 1][i]]        
         ans = []
         
         # WHAT: Execute queries via O(log N) jump evaluation checks.
@@ -46,6 +45,5 @@ class Solution:
                     if up[j][u] < v:
                         steps += (1 << j)
                         u = up[j][u]
-                ans.append(steps + 1)
-                
+                ans.append(steps + 1)      
         return ans
