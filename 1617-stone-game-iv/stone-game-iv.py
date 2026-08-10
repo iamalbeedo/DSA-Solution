@@ -5,7 +5,6 @@ class Solution:
         for i in range(1, n + 1):
             k = 1
             while k * k <= i:
-                # If taking k*k stones forces the opponent into a losing state
                 if not dp[i - k * k]:
                     dp[i] = True
                     break
