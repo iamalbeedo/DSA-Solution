@@ -8,7 +8,6 @@ class Solution:
             char = s[right]
             freq[char] = freq.get(char, 0) + 1
 
-            # Shrink the window if the frequency of the current character exceeds 2
             while freq[char] > 2:
                 freq[s[left]] -= 1
                 left += 1
