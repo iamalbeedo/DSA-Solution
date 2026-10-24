@@ -5,3 +5,4 @@ class Solution:
             return (275 * m) // 9 - 2 * ((m + 9) // 12) + q - 30
 
         return max(0, min(f(b), f(d)) - max(f(a), f(c)) + 1)
+#Nimman Nimman Chal ja eehan se - samjhe babua
